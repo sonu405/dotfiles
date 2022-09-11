@@ -64,13 +64,20 @@ lspconfig.util.default_config = vim.tbl_deep_extend(
 
 local servers = { "sumneko_lua", "gopls", "rust_analyzer","texlab","pyright" };
 
+-- removed
+-- require("nvim-lsp-installer").setup { ensure_installed = servers,
+--   ui = {
+--     border = "none"
+--   }
+-- }
 
-require("nvim-lsp-installer").setup {
-  ensure_installed = servers,
-  ui = {
-    border = "none"
-  }
-}
+-- mason
+require("mason-lspconfig").setup({
+    ensure_installed = servers
+})
+
+
+
 
 ---
 -- LSP Servers

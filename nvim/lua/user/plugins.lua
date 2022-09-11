@@ -156,8 +156,11 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
-  use "williamboman/nvim-lsp-installer" -- lsp installer
   use "onsails/lspkind.nvim"
+
+  -- mason
+  use { "williamboman/mason.nvim" }
+  use { "williamboman/mason-lspconfig.nvim"}
 
   use 'lervag/vimtex' -- for latex (lah-teh)
   -- use "rafamadriz/friendly-snippets"
