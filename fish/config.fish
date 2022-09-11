@@ -11,6 +11,7 @@ end
 
 # funcsave fish_greeting
 
+set -gx EDITOR nvim
 
 
 

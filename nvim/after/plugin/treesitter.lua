@@ -1,5 +1,5 @@
 require 'nvim-treesitter.configs'.setup {
-  ensure_installed = { "lua", "dart", "rust", "yaml", "go" },
+  ensure_installed = { "lua", "dart", "rust", "yaml", "go", "python" },
   sync_install = false,
   ignore_install = { "" },
   highlight = {

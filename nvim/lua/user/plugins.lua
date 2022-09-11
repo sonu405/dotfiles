@@ -54,7 +54,18 @@ return packer.startup(function(use)
   --   "catppuccin/nvim",
   --   as = "catppuccin"
   -- })
-  use { 'shaunsingh/oxocarbon.nvim', run = './install.sh' }
+  -- use { 'shaunsingh/oxocarbon.nvim', run = './install.sh' }
+
+  -- wanna try
+  -- use({
+  --   "Pocco81/true-zen.nvim",
+  --   config = function()
+  --     require("true-zen").setup {
+  --       -- your config goes here
+  --       -- or just leave it empty :)
+  --     }
+  --   end,
+  -- })
 
   -- test
   use({
@@ -65,6 +76,11 @@ return packer.startup(function(use)
       })
     end
   })
+  use { 'anuvyklack/pretty-fold.nvim',
+    config = function()
+      require('pretty-fold').setup()
+    end
+  }
 
 
   -- Comment Plugin
@@ -144,6 +160,8 @@ return packer.startup(function(use)
   use "onsails/lspkind.nvim"
 
   use 'lervag/vimtex' -- for latex (lah-teh)
+  -- use "rafamadriz/friendly-snippets"
+  use "kdheepak/cmp-latex-symbols"
 
   -- packer
   use 'wbthomason/packer.nvim'

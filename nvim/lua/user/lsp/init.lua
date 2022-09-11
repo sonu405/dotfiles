@@ -62,7 +62,7 @@ lspconfig.util.default_config = vim.tbl_deep_extend(
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 
-local servers = { "sumneko_lua", "gopls", "rust_analyzer" };
+local servers = { "sumneko_lua", "gopls", "rust_analyzer","texlab","pyright" };
 
 
 require("nvim-lsp-installer").setup {
@@ -139,8 +139,13 @@ lspconfig.yamlls.setup({
     lspconfig.util.default_config.on_attach(client, bufnr)
   end
 })
-
--- lspconfig.ltex.setup{}
+lspconfig.pyright.setup({
+  on_attach = function(client, bufnr)
+    lspconfig.util.default_config.on_attach(client, bufnr)
+  end
+})
+-- latex
+require'lspconfig'.texlab.setup{}
 
 
 -- luasnip setup

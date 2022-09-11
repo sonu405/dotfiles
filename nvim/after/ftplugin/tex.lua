@@ -1,5 +1,7 @@
 require 'cmp'.setup {
   sources = {
-    { name = 'omni' }
+    { name = 'luasnip' },
+    { name = 'nvim_lsp' },
+    { name = "latex_symbols" },
   }
 }
