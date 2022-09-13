@@ -75,6 +75,7 @@ cmp.setup({
     { name = 'luasnip' },
     { name = 'path' },
     { name = 'nvim_lsp', keyword_length = 3 },
+    { name = 'buffer' },
   },
   window = {
     documentation = cmp.config.window.bordered()

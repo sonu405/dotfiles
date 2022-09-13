@@ -62,7 +62,7 @@ lspconfig.util.default_config = vim.tbl_deep_extend(
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 
-local servers = { "sumneko_lua", "gopls", "rust_analyzer","texlab","pyright" };
+local servers = { "sumneko_lua", "gopls", "rust_analyzer", "texlab", "pylsp" };
 
 -- removed
 -- require("nvim-lsp-installer").setup { ensure_installed = servers,
@@ -73,7 +73,7 @@ local servers = { "sumneko_lua", "gopls", "rust_analyzer","texlab","pyright" };
 
 -- mason
 require("mason-lspconfig").setup({
-    ensure_installed = servers
+  ensure_installed = servers
 })
 
 
@@ -146,13 +146,37 @@ lspconfig.yamlls.setup({
     lspconfig.util.default_config.on_attach(client, bufnr)
   end
 })
-lspconfig.pyright.setup({
+-- lspconfig.pyright.setup({
+--   on_attach = function(client, bufnr)
+--     lspconfig.util.default_config.on_attach(client, bufnr)
+--   end,
+--   settings = {
+--     python = {
+--       analysis = {
+--         autoSearchPaths = true,
+--         diagnosticMode = "workspace",
+--         useLibraryCodeForTypes = true,
+--       }
+--     }
+--   }
+-- })
+require'lspconfig'.pylsp.setup{
   on_attach = function(client, bufnr)
     lspconfig.util.default_config.on_attach(client, bufnr)
-  end
-})
+  end,
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {'W391'},
+          maxLineLength = 100
+        }
+      }
+    }
+  }
+}
 -- latex
-require'lspconfig'.texlab.setup{}
+require 'lspconfig'.texlab.setup {}
 
 
 -- luasnip setup

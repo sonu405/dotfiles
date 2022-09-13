@@ -15,7 +15,7 @@
 -- Tokyo Night
 require("tokyonight").setup({
   style = "night",
-  transparent = "true",
+  -- transparent = "false",
   on_highlights = function(hl, c)
     local prompt = "#2d3149"
     hl.TelescopeNormal = {
