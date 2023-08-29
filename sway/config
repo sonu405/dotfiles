@@ -9,13 +9,10 @@
 # gaps inner 0 
 # gaps  horizontal 10
 
-<<<<<<< HEAD
-=======
 
 # Custom Setting 
 default_border none
 
->>>>>>> b6f7210 (Start of our newly created Config)
 #fonts
 font pango: SourceCodePro Medium 12
 # font pango: JetBrainsMono Medium 12
@@ -30,28 +27,16 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-<<<<<<< HEAD
-set $term alacritty
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-set $menu wofi --show run
-=======
 set $term wezterm
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu fuzzel --show run
->>>>>>> b6f7210 (Start of our newly created Config)
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-<<<<<<< HEAD
-output * bg ~/Downloads/stare.png fill
-=======
 output * bg ~/Downloads/weaponsForging.png fill
->>>>>>> b6f7210 (Start of our newly created Config)
 #output * bg #0d0500 solid_color
 #
 # Example configuration:
@@ -83,18 +68,11 @@ output * bg ~/Downloads/weaponsForging.png fill
 #       natural_scroll enabled
 #       middle_emulation enabled
 #   }
-<<<<<<< HEAD
-    input type:touchpad {
-        tap enabled
-        natural_scroll enabled
-    }
-=======
 
 input type:touchpad {
     tap enabled
     natural_scroll enabled
 }
->>>>>>> b6f7210 (Start of our newly created Config)
 input "type:keyboard" xkb_options caps:swapescape
 input * accel_profile flat
 
@@ -102,12 +80,9 @@ input * accel_profile flat
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
-<<<<<<< HEAD
-=======
 # screenshot
 bindsym $mod+Shift+Print exec grim -g "$(slurp -d)" - | wl-copy
 bindsym $mod+Print exec grimshot copy active
->>>>>>> b6f7210 (Start of our newly created Config)
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -166,17 +141,10 @@ bindsym $mod+Print exec grimshot copy active
 #
     # Switch to workspace
     bindsym $mod+1 workspace number 1
-<<<<<<< HEAD
-    bindsym $mod+2 workspace number 2
-    bindsym $mod+3 workspace number 3
-    bindsym $mod+4 workspace number 4
-    bindsym $mod+5 workspace number 5
-=======
     bindsym $mod+b workspace number 2
     bindsym $mod+n workspace number 3
     bindsym $mod+r workspace number 4
     bindsym $mod+o workspace number 5
->>>>>>> b6f7210 (Start of our newly created Config)
     bindsym $mod+6 workspace number 6
     bindsym $mod+7 workspace number 7
     bindsym $mod+8 workspace number 8
@@ -201,11 +169,7 @@ bindsym $mod+Print exec grimshot copy active
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-<<<<<<< HEAD
-    bindsym $mod+b splith
-=======
     bindsym $mod+Shift+b splith
->>>>>>> b6f7210 (Start of our newly created Config)
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
@@ -259,11 +223,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-<<<<<<< HEAD
-bindsym $mod+r mode "resize"
-=======
 bindsym $mod+Shift+R mode "resize"
->>>>>>> b6f7210 (Start of our newly created Config)
 
 #
 # Status Bar:

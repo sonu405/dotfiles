@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 . ~/.config/fish/aliases.fish
 
->>>>>>> b6f7210 (Start of our newly created Config)
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
@@ -17,12 +14,6 @@ end
 # funcsave fish_greeting
 
 set -gx EDITOR nvim
-<<<<<<< HEAD
-
-
-
-
-=======
 set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
 set -x MANPAGER "nvim +Man!"
 
@@ -37,4 +28,3 @@ for flatpakdir in ~/.local/share/flatpak/exports/bin /var/lib/flatpak/exports/bi
         contains $flatpakdir $PATH; or set -a PATH $flatpakdir
     end
 end
->>>>>>> b6f7210 (Start of our newly created Config)
