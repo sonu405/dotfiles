@@ -1,7 +1,16 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Import additional configuration files
+<<<<<<< HEAD
 #
+=======
+ import:
+  # uncomment the flavour you want below:
+    - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+     # - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+     # - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+
+>>>>>>> b6f7210 (Start of our newly created Config)
 # Imports are loaded in order, skipping all missing files, with the importing
 # file being loaded last. If a field is already present in a previous import, it
 # will be replaced.
@@ -14,8 +23,13 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
+<<<<<<< HEAD
 #env:
   # TERM variable
+=======
+ env:
+   TERM: xterm-256color
+>>>>>>> b6f7210 (Start of our newly created Config)
   #
   # This value is used to set the `$TERM` environment variable for
   # each instance of Alacritty. If it is not present, alacritty will
@@ -67,7 +81,11 @@
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
  #  # The value `0.0` is completely transparent and `1.0` is opaque.
+<<<<<<< HEAD
   opacity: 0.8
+=======
+  opacity: 1 
+>>>>>>> b6f7210 (Start of our newly created Config)
 
   # Startup Mode (changes require restart)
   #
@@ -111,6 +129,10 @@
  font:
   normal:
     family: Source Code Pro
+<<<<<<< HEAD
+=======
+    # family: Fira Code
+>>>>>>> b6f7210 (Start of our newly created Config)
     style: Regular
     #
     # Default: - (macOS) Menlo
