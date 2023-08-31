@@ -4,7 +4,7 @@ return {
       "L3MON4D3/LuaSnip",
       config = function(plugin, opts)
         -- include the default astronvim config that calls the setup call
-        require "plugins.configs.luasnip"(plugin, opts)
+        require "plugins.configs.luasnip" (plugin, opts)
         -- load snippets paths
         require("luasnip.loaders.from_vscode").lazy_load {
           -- this can be used if your configuration lives in ~/.config/nvim
@@ -12,6 +12,13 @@ return {
           -- must be specified in the next line
           paths = { "./lua/user/snippets" }
         }
+      end,
+    },
+    {
+      "Shatur/neovim-ayu",
+      -- name = "catppuccin",
+      config = function()
+        require('ayu').setup {}
       end,
     },
   },
