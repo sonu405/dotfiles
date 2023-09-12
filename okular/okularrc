@@ -1,0 +1,28 @@
+[Desktop Entry]
+FullScreen=true
+shouldShowMenuBarComingFromFullScreen=true
+shouldShowToolBarComingFromFullScreen=true
+
+[General]
+LockSidebar=true
+ShowSidebar=false
+
+[MainWindow]
+1366x768 screen: Height=768
+1366x768 screen: Width=1366
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAQAAAAAAAADIAAAC4vwCAAAAAfsAAAAcAG8AawB1AGwAYQByAF8AcwBpAGQAZQBiAGEAcgAAAAAAAAAC4v////8A///+AAAFVgAAAwAAAAAEAAAABAAAAAgAAAAI/AAAAAMAAAABAAAAAQAAACwAcQB1AGkAYwBrAEEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgIAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAiAGEAbgBuAG8AdABhAHQAaQBvAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+
+[Recent Files]
+File1[$e]=$HOME/books/prorust.pdf
+File2[$e]=$HOME/books/go_lang/LetsGoAlexEdwardsAnnotated.pdf
+File3[$e]=$HOME/books/go_lang/The.Go.Programming.Language.pdf
+File4[$e]=$HOME/books/postgres.pdf
+Name1[$e]=prorust.pdf
+Name2[$e]=LetsGoAlexEdwardsAnnotated.pdf
+Name3[$e]=The.Go.Programming.Language.pdf
+Name4[$e]=postgres.pdf
+
+[UiSettings]
+ColorScheme=Oxygen Cold

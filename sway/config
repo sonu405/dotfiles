@@ -36,7 +36,7 @@ set $menu fuzzel --show run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Downloads/weaponsForging.png fill
+output * bg ~/dotfiles/wallpapers/cable-car.png fill
 #output * bg #0d0500 solid_color
 #
 # Example configuration:

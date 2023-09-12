@@ -18,6 +18,7 @@ set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
 set -x MANPAGER "nvim +Man!"
 
 set -Ux fish_user_paths /home/jk/go/bin/
+set -Ux fish_user_paths ~/.emacs.d/bin/
 
 # Flakpak shit
 set -l xdg_data_home $XDG_DATA_HOME ~/.local/share

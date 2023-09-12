@@ -12,7 +12,9 @@ alias liveS='live-server --port=3000 --browser=brave'
 # tmp
 alias snipbox='cd ~/dev/backend/snippetbox/ & nvim cmd/web/main.go'
 
-# Use exa (ls on steroids) instead of ls
-alias ls='exa'
-# Use bat (cat on steroids) instead of cat
+# exa (ls on steroids) 
+alias ls='exa -l'
+# bat (cat on steroids)
 alias cat='bat'
+# ripgrep (grep on steroids)
+alias grep='rg'

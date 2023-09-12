@@ -18,5 +18,10 @@ colorscheme.apply_to_config(config)
 window.apply_to_config(config)
 keymaps.apply_to_config(config)
 
+
+-- Might need change
+-- Spawn a fish shell in login mode
+config.default_prog = { '/usr/bin/fish', '-l' }
+
 -- and finally, return the configuration to wezterm
 return config
