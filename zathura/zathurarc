@@ -1,5 +1,9 @@
 set selection-clipboard clipboard
 set sandbox none
 
-include styles
+
+set recolor   
+set recolor-lightcolor \#282828
+set recolor-keephue
+set default-bg \#282828
 

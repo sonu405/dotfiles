@@ -1,10 +1,5 @@
 return {
-  colorscheme = 'ayu',
-  options = {
-    opt = {
-      showtabline = 0, -- don't show tabline
-    },
-  },
+  colorscheme = "everforest",
   mappings = {
     n = { -- disable <leader>b mappings
       ["<leader>b"] = false,

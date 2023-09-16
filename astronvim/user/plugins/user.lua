@@ -1,4 +1,6 @@
 return {
+  -- Colorschemes
+  { "sainnhe/everforest" },
   {
     "Shatur/neovim-ayu",
     -- name = "catppuccin",
@@ -11,6 +13,10 @@ return {
   },
   {
     "akinsho/toggleterm.nvim",
+    enabled = false,
+  },
+  {
+    "folke/which-key.nvim",
     enabled = false,
   },
   {

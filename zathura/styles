@@ -1,3 +1,5 @@
+include styles // use this in zathurarrc to include these capcuccin styles below.
+
 set default-fg                "#CDD6F4"
 set default-bg 			          "#1E1E2E"
 
