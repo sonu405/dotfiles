@@ -14,7 +14,12 @@ alias snipbox='cd ~/dev/backend/snippetbox/ & nvim cmd/web/main.go'
 
 # exa (ls on steroids) 
 alias ls='exa -l'
+alias lst='exa -lT'
 # bat (cat on steroids)
 alias cat='bat'
 # ripgrep (grep on steroids)
 alias grep='rg'
+
+alias emacsgui='emacsclient -c'
+alias emacs='emacsclient -t'
+

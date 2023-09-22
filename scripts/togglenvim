@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+
+
+# Pseudo Code
+#
+# Prepend `~/.local/share/` to every path.
+# -> Check if any of nvim.later or nvim.bak exists
+# Exists: 
+# -> check for nvim.later
+#       Exists --> mv nvim to nvim.bak & nvim.later to nvim
+#
+#       Not Exists --> mv nvim to nvim.later & nvim.bak to nvim
+#
+#  Not Exists: 
+#       Do nothing!!
+#
+#  Repeat the same for `.local/state/nvim` and `.cache/nvim`
+
+# Documentation
+# Use `togglenvim -e true` for the first time, when you only have 
+# nvim dir under any of share, cache, config directories. Once you have
+# nvim.later or nvim.bak to toggle to, you can skip using the -e flag.
+
+# Don't add / at end.
+state="$HOME/.local/state" 
+share="$HOME/.local/share" 
+cache="$HOME/.cache" 
+config="$HOME/.config"
+
+# accept flag
+while getopts "e:" arg; do
+  case $arg in
+    e) Empty=$OPTARG;;
+  esac
+done
+
+
+# Cleanup
+if [[ -d $state/nvim ]]; then
+rm -r "$state/nvim"
+echo "removed $state/nvim"
+else 
+  echo "Didn't found $state/nvim"
+fi
+
+# Test
+# for path in "$HOME/dev/tryrun/checkscript/.local/share"
+
+# TODO Add support for symlinks.
+for path in $share $cache $config
+do 
+  if [[ -d "$path/nvim.bak"  ||  -d "$path/nvim.later" ]] 
+  then
+    echo "reached $path!!"
+    if [ -d $path/nvim.later ] 
+    then
+      mv "$path/nvim" "$path/nvim.bak"
+      mv "$path/nvim.later" "$path/nvim"
+    # elif [ -d ~/.local/share/nvim.later ] then
+    else
+      mv "$path/nvim" "$path/nvim.later"
+      mv "$path/nvim.bak" "$path/nvim"
+    fi
+  elif [[ -d $path/nvim  &&  -n "$Empty"  &&  ! -d "$path/nvim.bak"  &&  ! -d "$path/nvim.later" ]] 
+  then
+    echo "found only nvim"
+    mv "$path/nvim" "$path/nvim.bak"
+  else
+    echo "did nothing. path:$path"
+  fi
+done
+
