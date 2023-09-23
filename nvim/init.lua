@@ -1,21 +1,11 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
+require("sonu.lazy")
+require("sonu.lsp")
+require("sonu.cmp")
+require("sonu.options")
+require("sonu.remaps")
+
 
 
 -- Keymaps
 vim.g.mapleader = " "
 
-
--- plugins
-
-require("lazy").setup(plugins)

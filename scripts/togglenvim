@@ -20,6 +20,12 @@
 # Use `togglenvim -e true` for the first time, when you only have 
 # nvim dir under any of share, cache, config directories. Once you have
 # nvim.later or nvim.bak to toggle to, you can skip using the -e flag.
+#
+# Possibile Breaks
+# 1. When a dir has nvim.later as well as nvim.bak
+#
+# Confirm Breaks
+# 1. When a dir has nvim.later, nvim.bak as well as nvim
 
 # Don't add / at end.
 state="$HOME/.local/state" 
@@ -46,7 +52,6 @@ fi
 # Test
 # for path in "$HOME/dev/tryrun/checkscript/.local/share"
 
-# TODO Add support for symlinks.
 for path in $share $cache $config
 do 
   if [[ -d "$path/nvim.bak"  ||  -d "$path/nvim.later" ]] 
