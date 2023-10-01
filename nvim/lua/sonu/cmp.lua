@@ -12,7 +12,7 @@ cmp.setup({
   },
   mapping = cmp.mapping.preset.insert({
     -- confirm completion
-    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
 
     -- scroll up and down the documentation window
     ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),

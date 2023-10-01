@@ -21,7 +21,7 @@ keymaps.apply_to_config(config)
 
 -- Might need change
 -- Spawn a fish shell in login mode
-config.default_prog = { '/usr/bin/fish', '-l' }
+config.default_prog = { '/usr/bin/zsh', '-l' }
 
 -- and finally, return the configuration to wezterm
 return config

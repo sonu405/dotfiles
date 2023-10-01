@@ -11,9 +11,22 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
-local plugins = {
-
+require("lazy").setup {
+  -- Language tools
+  {
+    "ray-x/go.nvim",
+    dependencies = { -- optional packages
+      "ray-x/guihua.lua",
+      "neovim/nvim-lspconfig",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function()
+      require("go").setup()
+    end,
+    event = { "CmdlineEnter" },
+    ft = { "go", 'gomod' },
+    build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+  },
   {
     {
       'nvim-telescope/telescope.nvim',
@@ -23,6 +36,7 @@ local plugins = {
       }
     }
   },
+  -- themes
   {
     "sainnhe/everforest",
     lazy = false,
@@ -31,6 +45,17 @@ local plugins = {
       -- load the colorscheme
       vim.cmd([[colorscheme everforest]])
     end
+  },
+  {
+    'projekt0n/github-nvim-theme',
+    lazy = true,
+    config = function()
+      require('github-theme').setup({
+        -- ...
+        transparent = false,
+        dim_inactive = true,
+      })
+    end,
   },
   {
     'lewis6991/gitsigns.nvim',
@@ -57,29 +82,38 @@ local plugins = {
     },
   },
   { 'tpope/vim-fugitive' },
-
-  -- Lsp and cmp
-  { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
-  --- Uncomment these if you want to manage LSP servers from neovim
-  { 'williamboman/mason.nvim' },
-  { 'williamboman/mason-lspconfig.nvim' },
-  -- LSP Support
+  { 'ThePrimeagen/harpoon' },
   {
-    'neovim/nvim-lspconfig',
-    dependencies = {
-      { 'hrsh7th/cmp-nvim-lsp' },
-    },
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {
+      check_ts = true,
+      ts_config = { java = false },
+    }
   },
-  -- Autocompletion
+  -- Treesitter
   {
-    'hrsh7th/nvim-cmp',
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+  },
+  -- Lsp and cmp
+  {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v3.x',
     dependencies = {
-      { 'L3MON4D3/LuaSnip' },
+      -- LSP Support
+      { 'neovim/nvim-lspconfig' },
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
+      -- Cmp
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-nvim-lsp' },
       { 'hrsh7th/cmp-nvim-lua' },
       { 'hrsh7th/cmp-buffer' },
       { 'hrsh7th/cmp-path' },
-    }
+      -- Snippets
+      { 'L3MON4D3/LuaSnip' },
+      { 'rafamadriz/friendly-snippets' },
+    },
   },
 }
-
-require("lazy").setup(plugins)

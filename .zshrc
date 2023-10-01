@@ -47,7 +47,7 @@ ZSH_THEME="robbyrussell"
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -102,4 +102,19 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Config
- export PATH=$HOME/dotfiles/scripts:$PATH
+fortune
+
+# Path
+export PATH="$HOME/dotfiles/scripts:$PATH"
+export PATH="/home/jk/go/bin/:$PATH"
+export PATH="~/.emacs.d/bin/:$PATH"
+
+# Env Variables
+export EDITOR="nvim"
+export STARSHIP_CONFIG="~/.config/starship/starship.toml"
+export MANPAGER="nvim +Man!"
+
+# Alias
+alias ls='exa -l'
+alias cat='bat'
+alias grep='rg'
