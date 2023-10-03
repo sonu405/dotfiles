@@ -5,4 +5,5 @@ require("sonu.lsp")
 require("sonu.cmp")
 require("sonu.options")
 require("sonu.treesitter")
+require("sonu.autocmd")
 

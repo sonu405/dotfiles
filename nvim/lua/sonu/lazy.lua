@@ -28,6 +28,16 @@ require("lazy").setup {
     build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
   },
   {
+    'numToStr/Comment.nvim',
+    opts = {
+      -- add any options here
+    },
+    config = function()
+      require('Comment').setup()
+    end,
+    lazy = false,
+  },
+  {
     {
       'nvim-telescope/telescope.nvim',
       tag = '0.1.3',
