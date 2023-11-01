@@ -17,3 +17,7 @@ vim.keymap.set('n', '<leader>hp', hui.nav_prev, {})
 
 -- The Primeagen
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+
+-- File Manager
+vim.keymap.set("n", "<leader>e", "<cmd>Neotree current<CR>", {})

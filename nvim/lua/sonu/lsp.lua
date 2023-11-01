@@ -17,10 +17,17 @@ end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
-    'gopls', 'clangd', 'lua_ls', 'sqlls', 'svelte', 'marksman', 'tsserver', 'html', 'cssls', 'bashls'
+    'gopls', 'clangd', 'lua_ls', 'sqlls', 'svelte', 'marksman', 'tsserver', 'html', 'cssls', 'bashls', 'tailwindcss'
   },
   handlers = {
     lsp_zero.default_setup,
+    -- lua_ls = function()
+    --   require('lspconfig').tsserver.setup({
+    --     on_attach = function(client, bufnr)
+    --
+    --     end
+    --   })
+    -- end,
   }
 })
 

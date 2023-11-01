@@ -20,11 +20,7 @@ require("lazy").setup {
       "neovim/nvim-lspconfig",
       "nvim-treesitter/nvim-treesitter",
     },
-    config = function()
-      require("go").setup()
-    end,
-    event = { "CmdlineEnter" },
-    ft = { "go", 'gomod' },
+    ft = { "go", 'gomod', 'gohtml' },
     build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
   },
   {
@@ -62,7 +58,6 @@ require("lazy").setup {
     config = function()
       require('github-theme').setup({
         -- ...
-        transparent = false,
         dim_inactive = true,
       })
     end,
@@ -85,11 +80,7 @@ require("lazy").setup {
   {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    },
+    opts = {},
   },
   { 'tpope/vim-fugitive' },
   { 'ThePrimeagen/harpoon' },
@@ -100,6 +91,20 @@ require("lazy").setup {
       check_ts = true,
       ts_config = { java = false },
     }
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+  },
+  -- latex
+  {
+    'lervag/vimtex',
+    lazy = false,
   },
   -- Treesitter
   {
@@ -116,13 +121,21 @@ require("lazy").setup {
       { 'williamboman/mason.nvim' },
       { 'williamboman/mason-lspconfig.nvim' },
       -- Cmp
-      { 'hrsh7th/nvim-cmp' },
+      {
+        'hrsh7th/nvim-cmp',
+        config = function()
+          require('lsp-zero.cmp').extend()
+        end
+      },
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'hrsh7th/cmp-nvim-lua' },
       { 'hrsh7th/cmp-buffer' },
       { 'hrsh7th/cmp-path' },
-      -- Snippets
-      { 'L3MON4D3/LuaSnip' },
+      { 'saadparwaiz1/cmp_luasnip' },
+      {
+        'L3MON4D3/LuaSnip',
+        version = "v2.*",
+      },
       { 'rafamadriz/friendly-snippets' },
     },
   },
