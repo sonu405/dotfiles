@@ -8,5 +8,3 @@ require("sonu.treesitter")
 require("sonu.autocmd")
 
 
--- Snippets
-require('luasnip.loaders.from_vscode').lazy_load()
