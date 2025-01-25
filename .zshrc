@@ -102,12 +102,14 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Config
-fortune
+fortune sonuadded ghalib
 
 # Path
 export PATH="$HOME/dotfiles/scripts:$PATH"
 export PATH="/home/jk/go/bin/:$PATH"
 export PATH="~/.emacs.d/bin/:$PATH"
+export PATH="~/.cargo/bin/:$PATH"
+export PATH="~/.local/bin/:$PATH"
 
 # Env Variables
 export EDITOR="nvim"
@@ -115,6 +117,18 @@ export STARSHIP_CONFIG="~/.config/starship/starship.toml"
 export MANPAGER="nvim +Man!"
 
 # Alias
-alias ls='exa -l'
+alias ls='exa'
 alias cat='bat'
-alias grep='rg'
+alias tns='tmux new-session -s initial'
+
+# Gaming
+export AMD_VULKAN_ICD=RADV
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/radeon_icd.x86_64.json:/usr/share/vulkan/icd.d/radeon_icd.i686.json 
+
+# For jdownloader
+
+export AWT_TOOLKIT=MToolkit
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+# For Verilog integration in neovim 
+export PATH="$PATH:/home/jk/.local/share/nvim/mason/bin/" 

@@ -1,9 +1,58 @@
+# set selection-clipboard clipboard
+# set sandbox none
+#
+# # set recolor   
+# # set recolor-lightcolor \#222222
+# # set recolor-keephue
+# set default-bg \#ebe1ce
+# set default-fg \#592850
+# set recolor-darkcolor \#ebe1ce
+
+# ebe1ce
+
+# set window-height 1024
+# set window-width 768
+# set adjust-open width
+# # set show-scrollbars true
+# set first-page-column 2
+# set window-title-basename true
+# # set database sqlite
+# set recolor-keephue
 set selection-clipboard clipboard
-set sandbox none
 
 
-set recolor   
-set recolor-lightcolor \#282828
-set recolor-keephue
-set default-bg \#282828
+# key bindings
+map i recolor
+map p print
 
+set notification-bg                 "#302d41"
+set notification-fg                 "#d9e0ee"
+set notification-error-bg       "#302d41"
+set notification-error-fg       "#f28fad"
+set notification-warning-bg     "#302d41"
+set notification-warning-fg     "#fae3b0"
+
+set inputbar-fg                     "#d9e0ee"
+set inputbar-bg                     "#302d41"
+
+set recolor-lightcolor          "#FBF0D9"
+set recolor-darkcolor           "#000000"
+
+set index-fg                        "#d9e0ee"
+set index-bg                        "#1e1d2f"
+set index-active-fg                 "#d9e0ee"
+set index-active-bg                 "#302d41"
+
+# Colors (Catppuccin)
+set default-fg                      "#d9e0ee"
+set default-bg                      "#FBF0D9"
+
+set completion-bg                   "#302d41"
+set completion-fg                   "#d9e0ee"
+set completion-highlight-bg     "#575268"
+set completion-highlight-fg     "#d9e0ee"
+set completion-group-bg         "#302d41"
+set completion-group-fg         "#96cdfb"
+
+set statusbar-fg                    "#d9e0ee"
+set statusbar-bg                    "#302d41"

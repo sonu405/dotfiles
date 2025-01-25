@@ -6,7 +6,9 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/dotfiles ~/dev -mindepth 1 -maxdepth 2 -type d | fzf)
+    
+  # selected=$(fd . ~/ ~/dotfiles ~/dev -td --min-depth 0 --max-depth 2 -E go | fzf)
+    selected=$(find ~/ ~/dotfiles ~/dev -not -path '*/.*' -mindepth 1 -maxdepth 2 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then

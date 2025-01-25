@@ -5,11 +5,11 @@ return {
     "Shatur/neovim-ayu",
     -- name = "catppuccin",
     config = function()
-      require('ayu').setup {}
+      require("ayu").setup({})
     end,
   },
   {
-    "ThePrimeagen/vim-be-good"
+    "ThePrimeagen/vim-be-good",
   },
   {
     "akinsho/toggleterm.nvim",

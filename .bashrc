@@ -19,3 +19,4 @@ alias ls='exa -l'
 alias cat='bat'
 # ripgrep (grep on steroids)
 alias grep='rg'
+
