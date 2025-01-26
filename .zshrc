@@ -132,3 +132,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # For Verilog integration in neovim 
 export PATH="$PATH:/home/jk/.local/share/nvim/mason/bin/" 
+
+# For GTK 
+# export GDK_BACKEND=x11
